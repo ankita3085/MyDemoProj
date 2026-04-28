@@ -24,7 +24,31 @@
                 Console.WriteLine(i);
             }
 
-            // Further programming here....
+            // Add a switch case statement that checks the value of a variable and prints out a message based on the value.
+            int value = 5;
+
+            switch (value)
+            {
+                case 1:
+                    Console.WriteLine($"Value is {value}");
+                    break;
+
+                case 2:
+                    Console.WriteLine($"Value is {value}");
+                    break;
+                case 3:
+                    Console.WriteLine($"Value is {value}");
+                    break;
+                case 4:
+                    Console.WriteLine($"Value is {value}");
+                    break;
+                case 5:
+                    Console.WriteLine($"Value is {value}");
+                    break;
+                default:
+                    Console.WriteLine("Value is not 1, 2, 3, 4, or 5");
+                    break;
+            }
         }
     }
 }
