@@ -49,6 +49,40 @@
                     Console.WriteLine("Value is not 1, 2, 3, 4, or 5");
                     break;
             }
+
+            // Now use above switch case code and pass an array val then using a for each loop to check each value and print it.
+
+            int[] values = { 1, 4, 5, 7, 9 };
+            foreach (int i in values)
+            {
+                switch (i)
+                {
+                    case 1:
+                        Console.WriteLine($"Value is {i}");
+                        break;
+                    case 2:
+                        Console.WriteLine($"Value is {i}");
+                        break;
+                    case 3:
+                        Console.WriteLine($"Value is {i}");
+                        break;
+                    case 4:
+                        Console.WriteLine($"Value is {i}");
+                        break;
+                    case 5:
+                        Console.WriteLine($"Value is {i}");
+                        break;
+                    default:
+                        Console.WriteLine($"Value is {i}");
+                        break;
+                }
+            }
+
+            // Use same array val and use conditions if/else to print the value like if, else if, else if, else
+
+
+
+            // Write a code to pick value from array val and Add, Subtract them.
         }
     }
 }
