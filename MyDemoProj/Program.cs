@@ -80,6 +80,26 @@
 
             // Use same array val and use conditions if/else to print the value like if, else if, else if, else
 
+            foreach (var i in values)
+            {
+                if (i == 1)
+                {
+                    Console.WriteLine($"Value is {i}");
+                }
+                else if (i == 2)
+                {
+                    Console.WriteLine($"Value is {i}");
+                }
+                else if (i == 3)
+                {
+                    Console.WriteLine($"Value is {i}");
+                }
+                else
+                {
+                    Console.WriteLine($"Value is {i}");
+                }
+            }
+
 
 
             // Write a code to pick value from array val and Add, Subtract them.
