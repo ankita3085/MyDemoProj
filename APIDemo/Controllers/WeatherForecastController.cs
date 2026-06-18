@@ -21,8 +21,22 @@ namespace APIDemo.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IActionResult Get()
         {
-            // 
-            return Ok("Type here");
+            //string val = "1 item only";
+            List<string> val = new List<string>();
+            foreach (var i in Summaries)
+            {
+                val.Add($"The value is coming out to be: {i}");
+            }
+
+            return Ok(val);
+        }
+
+        [HttpGet(Name = "GetRandomGUID")]
+        public IActionResult GetRandomGUID()
+        {
+            
+
+            return Ok("val");
         }
     }
 }

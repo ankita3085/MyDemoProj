@@ -1,9 +1,14 @@
-﻿namespace MyDemoProj
+﻿
+namespace MyDemoProj
 {
     public class Program
     {
         public static void Main()
         {
+            TestClass test = new TestClass();
+
+
+
             Console.WriteLine("Do the coding here...");
             // Make an random array and use Random to pick values from that array and print them out.
             // In a For Loop!
@@ -101,9 +106,10 @@
             }
 
 
-
-            // Write a code to pick value from array val and Add, Subtract them.
-
+            // cREATE A NEW PROJECT Models, Services, Repository
+            // Create a new User Class in model project with objects in it Name, Age, Address, ZipCode - DONE
+            // Create new Class in Services -> UserService, insert a new object and assign values
+            // Create a new class in Repository- UserRepository, call database and add it.
 
         }
     }
