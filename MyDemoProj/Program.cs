@@ -1,4 +1,7 @@
-﻿namespace MyDemoProj
+﻿using Newtonsoft.Json;
+using System.Text.Json.Serialization;
+
+namespace MyDemoProj
 {
     public class Program
     {
@@ -82,6 +85,7 @@
 
             foreach (var i in values)
             {
+                Console.WriteLine("");
                 if (i == 1)
                 {
                     Console.WriteLine($"Value is {i}");
@@ -104,7 +108,62 @@
 
             // Write a code to pick value from array val and Add, Subtract them.
 
+            //1. Creating a class and assiging data to it.
+            Person person = new Person();
+            person.Age = 30;
+            person.PersonId = 1;
+            person.PersonName = "John Doe";
 
+            person.PersonDetail = new PersonDetail();
+            person.PersonDetail.Address = "123 Main St";
+            person.PersonDetail.PersonDetailId = 1;
+
+            Console.WriteLine("");
+            Console.WriteLine($"Value is {JsonConvert.SerializeObject(person)}");
+
+
+
+
+
+            // 2. Concept of using LIST for storing multiple objects of the same type.
+            List<Person> people = new List<Person>();
+            var personOtherWay = new Person
+            {
+                Age = 30,
+                PersonId = 1,
+                PersonName = "John Doe",
+                PersonDetail = new PersonDetail
+                {
+                    Address = "123 Main St",
+                    PersonDetailId = 1
+                }
+            };
+
+
+            Console.WriteLine("");
+            Console.WriteLine($"Other way of writing Value is {JsonConvert.SerializeObject(personOtherWay)}");
+
+            people.Add(personOtherWay);
+
+            var personOtherWay2 = new Person
+            {
+                Age = 25,
+                PersonId = 2,
+                PersonName = "Jane Doe",
+                PersonDetail = new PersonDetail
+                {
+                    Address = "456 Main St",
+                    PersonDetailId = 2
+                }
+            };
+            people.Add(personOtherWay2);
+
+            Console.WriteLine("");
+            Console.WriteLine($"Other way of writing Value is {JsonConvert.SerializeObject(people)}");
+
+            // 3. Inheritence (OOPS)
+            PersonDetail personDetail = new PersonDetail();
+            //personDetail.PersonName = "John Doe";
         }
     }
 }
